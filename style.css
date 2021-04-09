@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transp-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 400px;
+    height: 550px;
+
+    margin: auto;
+    box-sizing: border-box;
+    padding: 40px;
+    font-size: 15px;
+}
+h1 {
+    color:hsla(0, 0%, 100%, 0.75);
+    font-size: 45px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+p {
+    color: var(--transp-white);
+    font-family: 'Big Shoulders Display', cursive, sans-serif;
+    font-size: 20px;
+    line-height: 1.9;
+}
+img {
+    width: 80px;
+}
+button {
+    width: 130px;
+    height: 50px;
+
+    font-family: 'Big Shoulders Display', cursive, sans-serif;
+    border: none;
+    border-radius: 25px;
+
+    transition: border 200ms;
+}
+button:focus {
+    outline: 0;
+    border: 3px solid hsla(0, 0%, 100%, 0.75);
+}
+.moreBtn1 { 
+    color: var(--bright-orange);
+    font-weight: bolder;
+}
+.moreBtn2 { 
+    color: var(--dark-cyan);
+    font-weight: bolder;
+}
+.moreBtn3 { 
+    color: var(--very-dark-cyan);
+    font-weight: bolder;
+}
+.moreBtn1:focus { 
+    background-color: var(--bright-orange);
+    color:hsla(0, 0%, 100%, 0.75);
+}
+.moreBtn2:focus { 
+    background-color: var(--dark-cyan);
+    color:hsla(0, 0%, 100%, 0.75);
+}
+.moreBtn3:focus { 
+    background-color: var(--very-dark-cyan);
+    color:hsla(0, 0%, 100%, 0.75);
+}
+
+.card1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color:var(--bright-orange);
+}
+.card2 {
+    background-color: var(--dark-cyan);
+}
+.card3 {
+    background-color: var(--very-dark-cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media screen and (min-width: 1100px) {
+    .cards {
+        margin-top: 50px;
+        
+        flex-direction: row;
+        justify-content: center;
+    }
+    .card {
+        margin: 0;
+        height: 680px;
+    }
+    .card1 {
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color:var(--bright-orange);
+    }
+    .card2 {
+        background-color: var(--dark-cyan);
+    }
+    .card3 {
+        background-color: var(--very-dark-cyan);
+        border-radius: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
